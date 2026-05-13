@@ -224,7 +224,10 @@ canvas.rc{width:100%;height:140px;display:block;background:#04080f;margin-top:8p
 #page-biases.active{ display:block !important; }
 @media(max-width:640px){
   #page-chasers{ padding-bottom:60px !important; }
+  #mob-home-btn{display:flex !important;}
+}
 body.mobile #page-chasers{ padding-bottom:60px !important; }
+body.mobile #mob-home-btn{ display:flex !important; }
 body.mobile #page-biases{ padding-bottom:60px !important; }
   #page-biases{ padding-bottom:60px !important; }
   #sc-toolbar{ flex-wrap:wrap; gap:4px; padding:5px 8px; }
@@ -8970,6 +8973,32 @@ function initBiases() {
 
 
 </script>
+
+
+<style>
+#mob-home-btn{
+  display:none;
+  position:fixed;
+  top:8px;
+  left:8px;
+  z-index:10002;
+  background:var(--panel);
+  border:1px solid var(--bord2);
+  color:var(--cyan);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  padding:6px 12px;
+  cursor:pointer;
+  align-items:center;
+  gap:5px;
+  border-radius:4px;
+}
+#mob-home-btn:active{background:rgba(0,229,255,.1);}
+</style>
+<button id="mob-home-btn" onclick="showPage('home')">🏠 Home</button>
 
 </body>
 </html>
